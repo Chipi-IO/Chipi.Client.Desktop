@@ -1,0 +1,35 @@
+
+version: 0.2
+env:
+  variables:
+    CODEBUILD_ROLE: "arn:aws:iam::834552453766:role/Chipi-Cicd-CodeBuild-Service-Role"
+    REGION: "ap-southeast-2"
+  parameter-store:
+    CSC_KEY_PASSWORD: "Chipi-Infrastructure-Client-WinSigningCert"
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - apt-get install -f
+      - apt-get install -y jq
+      - apt-get install -y awscli
+      - apt-get install -y libsecret-1-dev
+      - npm cache clean -f
+      - npm install -g n
+      - n 8.11.3
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - aws configure set s3.signature_version s3v4
+      - aws_session=$(aws sts assume-role --role-arn $CODEBUILD_ROLE --role-session-name "CodeBuild-Deploy")
+      - export AWS_ACCESS_KEY_ID=$(echo $aws_session | jq .Credentials.AccessKeyId | xargs)
+      - export AWS_SECRET_ACCESS_KEY=$(echo $aws_session | jq .Credentials.SecretAccessKey | xargs)
+      - export AWS_SESSION_TOKEN=$(echo $aws_session | jq .Credentials.SessionToken | xargs)
+      - aws s3 cp s3://chipi-windows-codesigning/CHIPIWindowsCodeSigning.pfx ./wincert.pfx
+      - export CSC_LINK=file://./wincert.pfx
+      - yarn && cd app && yarn && cd ..
+      - yarn add electron-rebuild --dev
+      - yarn rebuild-node 
+      - yarn build-and-publish-win

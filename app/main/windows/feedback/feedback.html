@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel='stylesheet' href='https://afeld.github.io/emoji-css/emoji.css' />
+
+  <script>
+    (function () {
+      if (!process.env.HOT) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '../../../dist/feedback.css';
+        document.write(link.outerHTML);
+      }
+    }());
+  </script>
+
+  <script>
+    (function () {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = (process.env.HOT) ? 'http://localhost:3000/dist/feedback.bundle.js' : '../../../dist/feedback.bundle.js';
+      script.charset = "utf-8";
+      document.write(script.outerHTML);
+    }());
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

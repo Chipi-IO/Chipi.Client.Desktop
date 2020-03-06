@@ -1,0 +1,82 @@
+.magicFilterSuggestionPositionHelper{
+    height: 50px;
+    font-size: 1.5em;
+    box-sizing: border-box;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 100;
+    color: transparent;
+    background-color: transparent;
+    top: 0px;
+    left: 51px;
+}
+
+.magicFilterSuggestionWrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+}
+
+.magicFilterSuggestionWrapper span {
+    white-space: pre;
+}
+
+.magicFilterSuggestionListWrapper{
+    position: relative;
+
+    
+}
+
+    .magicFilterSuggestionList{
+        position: absolute;
+        left: 0px;
+        top: 101%;
+        padding: 10px 0px;
+        font-size: 0.9em;
+
+        border: 1px solid var(--main-border-color);
+        border-top: none;
+        color: var(--main-blue);
+        background-color: var(--main-background-color);
+
+
+        .magicFilterItemsContainer {
+            overflow-y: auto;
+            overflow-x: hidden; 
+            /*max-width: 695px;
+            min-width: 200px;*/
+            width: 695px;
+            max-height: 300px;
+            
+            .magicFilterItem {
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .magicFilterItemValue {
+
+                }
+
+                .magicFilterItemDescription {
+                    color: var(--secondary-font-color);
+                    font-size: 0.7em;                    
+                }
+            }
+
+            .magicFilterItem:hover{
+                cursor: pointer;
+            }
+            
+            .highligthed {
+                background-color: var(--secondary-selected-background-color);
+            }
+            
+        }
+
+
+    }

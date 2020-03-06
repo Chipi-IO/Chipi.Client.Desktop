@@ -1,0 +1,83 @@
+.gdrivePreivewWrapper {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .preivewTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .mimeTypeIcon {
+      width: 30px;
+      height: 30px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .fileInfoWrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      font-size: 0.8rem;
+
+      .fileName {
+        margin-left: 5px;
+        color: var(--main-font-color);
+      }
+
+      .fileTunnel {
+        justify-content: left;
+        margin-left: 5px;
+        white-space: nowrap;
+
+        .fileTunnelLink {
+          text-decoration: none;
+          padding: 2px 5px;
+          background: var(--tab-background);
+          display: inline-block;
+          color: var(--main-font-color);
+          white-space: nowrap;
+        }
+
+        .fileTunnelLink::after {
+          content: " >";
+        }
+
+        .fileTunnelLink:hover {
+          color: white;
+          background: var(--tab-selected-background);
+        }
+      }
+
+      .fileTunnel::after {
+        content: " >";
+      }
+    }
+  }
+}
+
+.previewData {
+  width: 100%;
+  height: 100%;
+
+  img {
+    max-width: 100%;
+  }
+
+  .pdfPreviewer {
+    width: 100%;
+    height: 98%;
+    border: 1px solid #999;
+    box-sizing: border-box;
+  }
+}
+
+.noPreview {
+  text-align: center;
+}

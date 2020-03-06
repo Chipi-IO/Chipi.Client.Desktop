@@ -1,0 +1,57 @@
+
+.outerContainer{
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0px 0px 0px 0px;
+}
+
+.outerContainer.win32 {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 100px;
+  }
+
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.5);
+    -webkit-border-radius: 100px;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+    -webkit-border-radius: 100px;
+  }
+
+  /* add vertical min-height & horizontal min-width */
+  ::-webkit-scrollbar-thumb:vertical {
+  min-height: 10px;
+  }
+  ::-webkit-scrollbar-thumb:horizontal {
+  min-width: 10px;
+  }
+}
+
+.transparentHelper{
+  width: 100%;
+  background-color: transparent;
+  flex-grow: 2;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+  

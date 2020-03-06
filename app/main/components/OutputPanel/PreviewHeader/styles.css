@@ -1,0 +1,22 @@
+.previewHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .previewSenderAvatar {
+        margin-right: 10px;
+    }
+    
+    .previewSenderTitle {
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+
+        .previewSenderName,
+        .previewSentTime
+        {
+            margin: 2px;
+        }
+    }      
+}

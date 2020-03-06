@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>logo/jira</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="67.6800148%" y1="40.3276956%" x2="40.820818%" y2="81.6596195%" id="linearGradient-1">
+            <stop stop-color="#0052CC" offset="18%"></stop>
+            <stop stop-color="#2684FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="32.6559851%" y1="59.1664468%" x2="59.3430302%" y2="17.9899763%" id="linearGradient-2">
+            <stop stop-color="#0052CC" offset="18%"></stop>
+            <stop stop-color="#2684FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="logo/jira" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.8631579,11.2926316 L12.5684211,0.997894737 L11.5705263,0 L11.5705263,0 L3.82105263,7.74947368 L3.82105263,7.74947368 L0.277894737,11.2926316 C-0.0915200565,11.6625064 -0.0915200565,12.2617042 0.277894737,12.6315789 L7.35789474,19.7115789 L11.5705263,23.9242105 L19.32,16.1747368 L19.44,16.0547368 L22.8631579,12.6315789 C23.2325727,12.2617042 23.2325727,11.6625064 22.8631579,11.2926316 Z M11.5705263,15.4989474 L8.03368421,11.9621053 L11.5705263,8.42526316 L15.1073684,11.9621053 L11.5705263,15.4989474 Z" id="Shape" fill="#2684FF" fill-rule="nonzero"></path>
+        <path d="M11.5705263,8.42526316 C9.25486682,6.10933009 9.24358112,2.35824608 11.5452632,0.0284210526 L3.80526316,7.76526316 L8.01789474,11.9778947 L11.5705263,8.42526316 Z" id="Path" fill="url(#linearGradient-1)"></path>
+        <path d="M15.1168421,11.9526316 L11.5705263,15.4989474 C12.6882199,16.6159762 13.3161895,18.1313915 13.3161895,19.7115789 C13.3161895,21.2917664 12.6882199,22.8071817 11.5705263,23.9242105 L11.5705263,23.9242105 L19.3294737,16.1652632 L15.1168421,11.9526316 Z" id="Path" fill="url(#linearGradient-2)"></path>
+    </g>
+</svg>

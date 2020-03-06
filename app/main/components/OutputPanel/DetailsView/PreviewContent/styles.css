@@ -1,0 +1,5 @@
+.previewContent{
+    font-size: 0.9rem;
+    color: var(--main-grey);
+    word-wrap: break-word;
+}

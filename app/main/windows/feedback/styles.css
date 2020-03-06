@@ -1,0 +1,125 @@
+:root {
+  --secondary-font-color: #999;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  border: 1px solid #CCC;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #FFF;
+  text-align: center;
+}
+
+.label {
+  display: block;
+  width: 80%;
+}
+
+.sentiments {
+  margin: 10px 0;
+}
+
+.sentimentButton {
+  background: transparent;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid transparent;
+  font-size: 40px;
+  margin: 0 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%
+}
+
+.sentimentButton:focus {
+  border: 2px solid #814A8E;
+  outline: none;
+}
+
+.labelText {
+  display: block;
+}
+
+.selectedSentimentButton[value='happy'] {
+  background: #BCF298;
+}
+
+.selectedSentimentButton[value='neutral'] {
+  background: #F2EE98;
+}
+
+.selectedSentimentButton[value='angry'] {
+  background: #F2989B;
+}
+
+.submit {
+  margin-left: auto;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.cancel {
+  border: 2px solid #814A8E;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 10px 20px;
+  color: #814A8E;
+  background: transparent;
+  font-weight: bold;
+}
+
+.submit {
+  border: none;
+  border-radius: 5px;
+  background: #814A8E;
+  color: #FFF;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.buttonGrow {
+  flex-grow: 1
+}
+
+.hidden {
+  display: none;
+}
+
+.textarea {
+  width: 100%;
+  font-family: var(--main-font);
+  border: 2px solid #814A8E;
+  border-radius: 5px;
+  height: 100px;
+  color: #333;
+  font-size: 1em;
+  line-height: 150%;
+  margin: 10px 0;
+  padding: 10px;
+  resize: none;
+}
+
+.invalidMessage {
+  margin-bottom: 10px;
+}

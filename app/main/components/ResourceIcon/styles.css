@@ -1,0 +1,20 @@
+.icon {
+  min-width: 80px;
+}
+
+.rightSpacingSmall {
+  margin-right: 8px;
+}
+
+.rightSpacingLarge {
+  margin-right: 35px;
+}
+
+.iconSuggestionItem {
+  width: 35px;
+  margin: auto;
+}
+
+.defaultIcon {
+  width: 35px;
+}

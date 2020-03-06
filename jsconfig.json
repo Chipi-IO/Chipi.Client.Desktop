@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "module": "commonjs",
+    "paths": {
+      "app": ["app"],
+      "Environment": ["app/environment/uat"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,92 @@
+.headerLineWrapper.resultsList {
+    font-size: 15px;
+    letter-spacing: -0.2px; 
+    text-align: left;
+    font-weight: 400;
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+  
+    a:hover {
+        text-decoration: underline;
+        cursor: 
+    }
+
+    .title {
+        max-width: 100%;
+        color: var(--result-title-color);
+        font-weight: 500;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.headerLineWrapper.selected {
+    color: var(--selected-result-title-color);
+    
+    .title {
+        color: var(--selected-result-title-color);
+    }
+}
+
+.headerLineWrapper.detailsView {
+    text-align: left;
+    font-size: 0.9rem;
+    white-space: nowrap;    
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+  
+    a:hover {
+        text-decoration: underline;
+        cursor: 
+    }
+
+    .title {
+        color: var(--main-black);
+        text-overflow: ellipsis;
+    }
+}
+
+.headerLineWrapper {
+    display: flex;
+    color: var(--main-blue);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+
+.tunnelInfo {
+    display: flex;
+    flex-direction: row;
+
+    .tunnelName {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.headerDelimiter {
+    padding: 0px 5px;
+}
+
+.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.separator {
+    padding-right: 5px;
+}

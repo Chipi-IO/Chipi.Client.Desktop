@@ -1,0 +1,54 @@
+:root {
+  /* Main fonts and colors */
+  --main-background-color: rgba(255, 255, 255, 1);
+  --main-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --main-font-color: #000000;
+  --main-border-color: rgba(0,0,0,.3);
+  --main-application-border-color: rgba(0, 0, 0, 0.15);
+  --main-blue: #2266EE;
+  --main-grey: #595959;
+  --main-black: #000000;
+  --main-error: #e6360e;
+  --main-selected-background-color: var(--main-blue); 
+  --main-box-shadow: 0 1px 5px 0 rgba(0,0,0,.15), 0 15px 30px 0 rgba(0,0,0,.3);
+
+  /* border styles */
+  --main-border-color: #eee;
+  --main-border: 2px solid var(--main-border-color);
+
+  /* Secondary fonts and colors */
+  --secondary-font-color: #999;
+  --secondary-border-color: #999;
+  --secondary-selected-background-color: #e6e6e6;
+  --secondary-content-background-color: #f2f2f2;
+
+  /* results list */
+  --result-background: transparent;
+  --result-title-color: var(--main-font-color);
+  --result-subtitle-color: #888;
+
+  /* selected result */
+  --selected-result-title-color: white;
+  --selected-result-subtitle-color: rgba(255, 255, 255, .7);
+  --selected-result-background: var(--main-selected-background-color);
+
+  /* inputs */
+  --preview-input-background: white;
+  --preview-input-color: var(--main-font-color);
+  --preview-input-border: 1px solid #ccc;
+  --preview-content-background: var(--secondary-content-background-color);
+
+  /* filter for previews */
+  --preview-filter: none;
+
+  /* Chrome doesn't support hex with alpha yet */
+  --tab-background: #EEE;
+  --tab-background-transparent: rgba(238, 238, 238, 0);
+  --tab-selected-background: #333;
+  --tab-selected-background-transparent: rgba(51, 51, 51, 0);
+
+  --description-background: var(--main-background-color);
+  --description-background-transparent: rgba(255,255,255,0);
+  --description-selected-background: var(--selected-result-background);
+  --description-selected-background-transparent: rgba(18, 110, 219, 0);
+}

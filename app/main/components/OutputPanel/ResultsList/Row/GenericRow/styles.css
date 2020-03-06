@@ -1,0 +1,15 @@
+ 
+  .rowContent {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 3px 10px;
+    color: var(--main-font-color);
+    width: 100%;
+    height: 60px;
+    background: var(--result-background);
+  }

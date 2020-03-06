@@ -1,0 +1,60 @@
+.cardWrapper {
+    display: inline-flex;
+    height: 100%;
+}
+
+.detailsWrapper {
+    width: 400px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.actionsWrapper {
+    width: 200px;
+    padding: 10px 0px;
+}
+
+.detailsHeaderWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 10px;
+    justify-content: left;
+    
+    .pluginInfo {
+        display: flex;
+        justify-content: left;
+
+        .pluginName {
+            font-size: 1.1rem;
+        }
+    }
+    
+    .channelIcon {
+        max-height: 24px;
+        max-width: 24px;
+        margin-right: 10px;
+    }
+}
+
+.previewWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    flex: 1;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--preview-content-background);
+    padding: 20px;
+
+    .preivewContentWrapper {
+        overflow: auto;
+        height: 100%;
+    }
+}
+
+
+
+
+

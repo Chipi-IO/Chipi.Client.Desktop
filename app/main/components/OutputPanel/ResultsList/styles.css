@@ -1,0 +1,60 @@
+
+.resultsListWrapper
+{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.resultsList {
+  width: 100%;
+  flex: 2;
+}
+
+.resultsListStatus {
+  width: 100%;
+  flex: 0;
+}
+
+.resultsListStatus {
+  height: 30px;
+  padding: 0 10px;
+  border-top: var(--main-border);
+  box-sizing: border-box;
+  color: var(--secondary-font-color);
+  background: var(--preview-input-background);
+  font-size: .8em;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+}
+
+.statusBarDescription {
+  margin: 0 20px 0 5px;
+  text-transform: lowercase;
+}
+
+.resultsListActionsWrapper {
+  height: 100%;
+  flex-grow: 1;
+}
+
+.feedbackButtonWrapper {
+  display: flex; 
+  height: 100%;
+  align-items: center;
+}
+
+.feedbackButton {
+  background: var(--selected-result-background);
+  outline: none;
+  border-radius: 3px;
+  padding: 0px 10px;
+  color: #FFF;
+  margin-bottom: 5px;
+}
+
+.feedbackButton:focus, .feedbackButton:hover {
+  background-color: var(--secondary-font-color);
+}

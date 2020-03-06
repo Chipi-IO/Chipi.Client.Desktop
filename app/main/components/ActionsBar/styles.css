@@ -1,0 +1,146 @@
+.itemActions {
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  display: flex;
+  height: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  padding: 0 10px;
+
+  .actions {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .actionKey {
+    margin-right: 5px;
+    font-weight: normal;
+  }
+
+  .actionName {
+    font-size: 0.8em;
+  }
+}
+
+.resultsListActions {
+  display: flex;
+  flex-direction: row;
+
+  .actions {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .actionKey {
+    margin-right: 5px;
+  }
+
+  .actionName {
+    display: block;
+  }
+
+  .actionTriggered {
+    .actionKey {
+      animation: resultsListActionsEffect 0.2s ease-out;
+    }
+  }
+}
+
+@keyframes resultsListActionsEffect {
+  25% {
+    background-color: var(--secondary-font-color);
+    color: white;
+  }
+}
+
+.detailsView {
+  display: flex;
+  flex-direction: column;
+
+  .actionLongName {
+    display: block;
+    flex: 2;
+    font-size: 0.9rem;
+  }
+
+  .actionName {
+    display: none;
+  }
+
+  .actionKey {
+    display: flex;
+    align-items: center;
+    padding: 2px 0px;
+    justify-content: space-evenly;
+  }
+
+  .actions {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 5px 10px 5px 5px;
+    flex: 0;
+    margin-right: 5px;
+  }
+
+  .actionSelected {
+    background-color: var(--selected-result-background);
+    color: var(--selected-result-title-color);
+    cursor: pointer;
+  }
+
+  .actionTriggered {
+    animation: detailsViewActionsEffect 0.2s ease-out;
+  }
+
+  .actionSelected.actionTriggered {
+    animation: detailsViewActionsEffecHovered 0.2s ease-out;
+  }
+}
+
+@keyframes detailsViewActionsEffect {
+  50% {
+    background-color: var(--selected-result-background);
+    color: var(--selected-result-title-color);
+  }
+}
+
+@keyframes detailsViewActionsEffecHovered {
+  50% {
+    background-color: white;
+    color: var(--secondary-font-color);
+  }
+}
+
+.actionKey {
+  text-align: center;
+  padding: 1px 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .actionKeyElementMore:before {
+    content: " + ";
+  }
+
+  .actionKeyElement{
+    padding: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+}
+
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.actionLongName {
+  display: none;
+}

@@ -1,0 +1,43 @@
+.outputPanelWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.outputContentWrapper{
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+  width: 100%;
+}
+
+.statusBarWrapper {
+  flex: 0;
+}
+
+.noResults {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 15px;
+    background: #FFF;
+  }
+
+  .emoji {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+
+  
+  /* Standard syntax */
+  @keyframes slideToLeft {
+    100%   {margin-left: -100%;}
+  }
+
+  /* Standard syntax */
+  @keyframes slideToRight {
+    100%   {margin-left: 0%;}
+  }
+
+

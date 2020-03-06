@@ -1,0 +1,15 @@
+.slackPreivewWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .previewMessageTunnel {
+    margin-bottom: 10px;
+  }
+
+  .previewMessage {
+    font-size: 0.9rem;
+    font-weight: normal;
+    word-wrap: break-word;
+  }
+}

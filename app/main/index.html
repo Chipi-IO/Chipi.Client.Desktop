@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chipi</title>
+    <link rel='stylesheet' id='chipi-theme'>
+    <link rel='stylesheet' href='https://afeld.github.io/emoji-css/emoji.css' />
+    <script>
+      (function() {
+        if (!process.env.HOT) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = '../dist/index.css';
+          document.write(link.outerHTML);
+        }
+      }());
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function() {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = (process.env.HOT) ? 'http://localhost:3000/dist/index.bundle.js' : '../dist/index.bundle.js';
+        document.write(script.outerHTML);
+      }());
+    </script>
+  </body>
+</html>

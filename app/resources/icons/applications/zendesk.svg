@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>logo/zendesk</title>
+    <desc>Created with Sketch.</desc>
+    <g id="logo/zendesk" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path" fill="#03363D" points="11.0949965 7.96370259 11.0949965 21.3588813 -2.84217094e-14 21.3588813"></polygon>
+        <path d="M11.0949965,3 C11.0949965,6.06379869 8.61129695,8.54749826 5.54749826,8.54749826 C2.48369957,8.54749826 -2.93098879e-14,6.06379869 -2.93098879e-14,3 L11.0949965,3 L11.0949965,3 Z" id="Path" fill="#03363D"></path>
+        <path d="M12.9056267,21.453125 C12.9056267,18.3893263 15.3893263,15.9056267 18.453125,15.9056267 C21.5169237,15.9056267 24.0006233,18.3893263 24.0006233,21.453125 L12.9056267,21.453125 Z" id="Path" fill="#03363D"></path>
+        <polygon id="Path" fill="#03363D" points="12.9056267 16.3951787 12.9056267 3 24.0018101 3"></polygon>
+    </g>
+</svg>

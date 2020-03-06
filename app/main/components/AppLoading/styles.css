@@ -1,0 +1,13 @@
+.appLoading {
+    /*text-align: right;
+    width: 60px;*/
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.appLoading img {
+    width: 200px;
+}

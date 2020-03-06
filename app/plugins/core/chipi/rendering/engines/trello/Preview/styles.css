@@ -1,0 +1,31 @@
+.trelloPreivewWrapper {
+    width: 100%;
+
+    .trelloPreviewContent
+    {
+        border-radius: 10px;
+        background-color: var(--preview-content-background);
+    }
+
+    .messageSubject {
+        font-weight: normal;
+        font-size: 1.2em;
+        color: var(--main-font-color);
+    }
+
+    .additionalTunnelsWrapper {
+        margin-top: 5px;
+        font-size: 0.9em;
+
+        .additionalTunnel {
+            margin-right: 10px
+        }
+    }
+
+    .messageText {
+        font-weight: normal;
+        font-size: 0.9em;
+        margin-top: 15px;
+        width: 100%;
+    }
+}

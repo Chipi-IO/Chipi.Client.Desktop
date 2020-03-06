@@ -1,0 +1,21 @@
+.gmailPreivewWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .previewSubject{
+        font-size: 1.2rem;
+        color: var(--main-black);
+    }
+
+    .previewContent{
+        font-size: 0.9rem;
+        margin-top: 15px;
+        font-weight: normal;
+
+        .previewContentLine{
+            word-wrap: break-word;
+            width: 100%;
+        }
+    }
+}

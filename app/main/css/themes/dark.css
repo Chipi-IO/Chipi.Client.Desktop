@@ -1,0 +1,43 @@
+:root {
+  /* Main fonts and colors */
+  --main-background-color: rgba(62, 65, 67, 1);
+  --main-font: system;
+  --main-font-color: white;
+  --main-border-color: rgba(0,0,0,.3);
+  --main-application-border-color: rgba(0, 0, 0, 0.15);
+  --main-blue: #2266EE;
+  --main-grey: #595959;
+  --main-black: #000000;
+  --main-error: #e6360e;
+  --main-selected-background-color: var(--main-blue); 
+  --main-box-shadow: 0 1px 5px 0 rgba(0,0,0,.15), 0 15px 30px 0 rgba(0,0,0,.3);
+
+  /* border styles */
+  --main-border-color: #686869;
+  --main-border: 2px solid var(--main-border-color);
+
+  /* Secondary fonts and colors */
+  --secondary-font-color: #9B9D9F;
+  --secondary-selected-background-color: #e6e6e6;
+  --secondary-content-background-color: #f2f2f2;
+
+  /* results list */
+  --result-background: transparent;
+  --result-title-color: var(--main-font-color);
+  --result-subtitle-color: #cccccc;
+
+
+  /* selected result */
+  --selected-result-title-color: white;
+  --selected-result-subtitle-color: var(--result-subtitle-color);
+  --selected-result-background: var(--main-selected-background-color);
+
+  /* inputs */
+  --preview-input-background: #2E2E2C;
+  --preview-input-color: var(--main-font-color);
+  --preview-input-border: 0;
+  --preview-content-background: var(--secondary-content-background-color);
+
+  /* filter for previews */
+  --preview-filter: invert(100%) hue-rotate(180deg) contrast(80%);;
+}

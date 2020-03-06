@@ -1,0 +1,41 @@
+.status {
+  color: var(--secondary-font-color);
+  cursor: default;
+  margin-right: 10px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.offline {
+  color: #D0021B;
+  display: flex;
+  align-items: center;
+}
+
+.emoji {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.signInButton {
+  cursor: pointer;
+  background: #366AD3;
+  border-radius: 4px;
+  padding: 8px 15px;
+  border: none;
+  color: #FFF;
+  font-size: 1em;
+  outline: none;
+}
+
+.signInButton:focus {
+  box-shadow: 0 0 0 2px #FFF, 0 0 0 4px #2b53a5;
+  background: #2b53a5;
+}
+
+.userPicture {
+  border-radius: 10%;
+  height: 36px;
+  -webkit-app-region: drag;
+}

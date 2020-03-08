@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router"; /* react-router v4/v5 */
 import { ConnectedRouter } from "connected-react-router";
 import MainSearch from "./mainSearch";
 import FullThread from "./fullThread";
+import Settings from "./settings";
 import { HotKeys } from "react-hotkeys";
 import hotKeysHelper from "@app/lib/hotKeysHelper";
 import { chipiAnalytics } from "@app/lib/chipi";
@@ -15,6 +16,7 @@ import { History, Location } from "history";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { toggleOff } from "@app/main/createWindow/toggleWindow";
 import cn from "classnames";
+import Transitions from "./transitions";
 
 interface IRoutesProps {
   history: History<any>;
@@ -148,48 +150,42 @@ class Routes extends React.Component<IRoutesProps, IRoutesState> {
               className="topRoutesActions"
               invisible={true}
             />
-            <TransitionGroup>
-              <CSSTransition key="transition" classNames={this.transitAnimation} timeout={5000}>
-                <Switch>
-                  <Route
-                    exact
-                    path="/"
-                    render={props => (
-                      <MainSearch
-                        {...props}
-                        registerHotKeys={this.registerHotKeys}
-                        deregisterHotKeys={this.deregisterHotKeys}
-                        hideWindow={this.hideWindow}
-                        openFeedbackWindow={this.openFeedbackWindow}
+            <Route
+              render={() => {
+                const location = this.props.history.location;
+                return (
+                  <Transitions pageKey={location.key} {...location.state}>
+                    <Switch location={location}>
+                      <Route
+                        exact
+                        path="/full-thread"
+                        render={props => (
+                          <FullThread
+                            {...props}
+                            registerHotKeys={this.registerHotKeys}
+                            deregisterHotKeys={this.deregisterHotKeys}
+                          />
+                        )}
                       />
-                    )}
-                  />
-                  <Route
-                    exact
-                    path="/full-thread"
-                    render={props => (
-                      <FullThread
-                        {...props}
-                        registerHotKeys={this.registerHotKeys}
-                        deregisterHotKeys={this.deregisterHotKeys}
+                      <Route exact path="/settings" render={props => <Settings {...props} />} />
+                      <Route
+                        exact
+                        path="/"
+                        render={props => (
+                          <MainSearch
+                            {...props}
+                            registerHotKeys={this.registerHotKeys}
+                            deregisterHotKeys={this.deregisterHotKeys}
+                            hideWindow={this.hideWindow}
+                            openFeedbackWindow={this.openFeedbackWindow}
+                          />
+                        )}
                       />
-                    )}
-                  />
-                  <Route
-                    exact
-                    path="/settings"
-                    render={props => (
-                      <FullThread
-                        {...props}
-                        registerHotKeys={this.registerHotKeys}
-                        deregisterHotKeys={this.deregisterHotKeys}
-                      />
-                    )}
-                  />
-                  <Route render={() => <div>No Match</div>} />
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
+                    </Switch>
+                  </Transitions>
+                );
+              }}
+            ></Route>
           </HotKeys>
           <div
             className={styles.transparentHelper}

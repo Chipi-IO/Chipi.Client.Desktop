@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { remote, ipcRenderer, shell } from "electron";
-import { focusableSelector } from "cerebro-ui";
 import cn from "classnames";
 import { on } from "@app/lib/rpc";
 
@@ -31,6 +30,7 @@ import Logo from "@app/main/components/Logo";
 import { withRouter } from "react-router";
 import { CHIPI_WEB_CLIENT } from "Environment";
 import ResourceIcon, { IconsCollection } from "@app/main/components/ResourceIcon";
+import { goToSettings } from "@app/main/actions/appRoute";
 
 const logger = new Logger("component.Chipi");
 
@@ -62,17 +62,6 @@ const wrapEvent = realEvent => {
   event.ctrlKey = realEvent.ctrlKey;
   event.metaKey = realEvent.metaKey;
   return event;
-};
-
-/**
- * Set focus to first focusable element in preview
- */
-const focusPreview = () => {
-  const previewDom = document.getElementById("preview");
-  const firstFocusable = previewDom && previewDom.querySelector(focusableSelector);
-  if (firstFocusable) {
-    firstFocusable.focus();
-  }
 };
 
 /**
@@ -134,6 +123,7 @@ class MainSearch extends Component {
     this.highlightMainInput = this.highlightMainInput.bind(this);
     this.mouseClickElement = this.mouseClickElement.bind(this);
     this.onFixConnectClicked = this.onFixConnectClicked.bind(this);
+    this.onSettingsClick = this.onSettingsClick.bind(this);
 
     this.getAutocomplete = this.getAutocomplete.bind(this);
 
@@ -220,6 +210,10 @@ class MainSearch extends Component {
   onFixConnectClicked() {
     shell.openExternal(CHIPI_WEB_CLIENT.host);
     this.props.connectActions.fixingConnectClicked();
+  }
+
+  onSettingsClick() {
+    this.props.goToSettings();
   }
 
   cleanup() {
@@ -380,10 +374,10 @@ class MainSearch extends Component {
               isOffline={authState.isOffline}
               term={term}
               authState={authState}
-              login={() => ipcRenderer.send("signIn")}
+              onClick={this.onSettingsClick}
+              //login={() => ipcRenderer.send("signIn")}
               ref={c => (this.searchStatus = c)}
               shouldFocusSignIn={this.state.shouldFocusSignIn}
-              onSignInButtonBlur={this.onSignInButtonBlur}
             />
           </div>
           {inactivatedConnects && inactivatedConnects.length > 0 && (
@@ -480,7 +474,8 @@ function mapDispatchToProps(dispatch) {
   return {
     searchActions: bindActionCreators(searchActions, dispatch),
     authActions: bindActionCreators(authActions, dispatch),
-    connectActions: bindActionCreators(connectActions, dispatch)
+    connectActions: bindActionCreators(connectActions, dispatch),
+    goToSettings: bindActionCreators(goToSettings, dispatch)
   };
 }
 

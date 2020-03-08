@@ -1,6 +1,23 @@
+### Local Environment
+Install `nvm` to manage node version.
+    Follow this link https://github.com/nvm-sh/nvm#installing-and-updating to install nvm
+
+    Install node 10.2.1 
+        `nvm install 10.2.1`
+
+Install `pyenv` to manage python version
+    Follow this link https://github.com/pyenv/pyenv to intall pyenv
+
+Install `yarn`
+    `brew install yarn`
+
+Install `jq`
+    `brew install jq`
+
+
 ### Install dependencies
 
-    yarn && cd app && yarn && cd ..
+    `yarn && cd app && yarn && cd .. && yarn rebuild-node`
 
 ### Environment choose
 
@@ -10,13 +27,13 @@ To choose different environment for running the `yarn dev`, please change the `E
 
 ### Run development
 
-    yarn dev
+    `yarn dev`
 
 ### Package app
 
-    yarn package
+    `yarn package`
 
-### Release MAC app to S3
+### Release MAC app to S3 (outdated)
 
 1. Talk to Jing to add your AWS IAM user into Deployer Role
 
@@ -35,7 +52,7 @@ To choose different environment for running the `yarn dev`, please change the `E
 5. Run the script `yarn release`
 
 
-### Release MAC app to Github (outdated)
+### Release MAC app to Github
 
 1. Save application certifiacte at a secure place.
 

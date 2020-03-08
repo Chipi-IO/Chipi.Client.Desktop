@@ -1,8 +1,9 @@
 
-import { app, screen } from 'electron'
+import { app, remote, screen } from 'electron'
 import Logger from '../../lib/logger'
 import { isDev } from 'Environment'
 
+const windowScreen = screen ? screen : remote ? remote.screen : null ;
 const log = new Logger('toggleWindow');
 
 let cachedXOffsetPercent, cachedYOffsetPercent
@@ -75,7 +76,7 @@ const updateWindowOffsets = (appWindow) => {
   }
 
   const windowPosition = appWindow.getPosition();
-  const currentDisplay = screen.getDisplayNearestPoint({ x: windowPosition[0], y: windowPosition[1] });
+  const currentDisplay = windowScreen.getDisplayNearestPoint({ x: windowPosition[0], y: windowPosition[1] });
   const bounds = currentDisplay.bounds;
 
   cachedXOffsetPercent = (windowPosition[0] - bounds.x) / bounds.width;
@@ -84,11 +85,11 @@ const updateWindowOffsets = (appWindow) => {
 
 const calculateWindowPosition = (appWindow) => {
   // Get mouse cursor absolute position
-  const { x, y } = screen.getCursorScreenPoint();
+  const { x, y } = windowScreen.getCursorScreenPoint();
 
   // Find the display where the mouse cursor will be
 
-  const currentDisplay = screen.getDisplayNearestPoint({ x, y });
+  const currentDisplay = windowScreen.getDisplayNearestPoint({ x, y });
 
   const bounds = currentDisplay.bounds;
 

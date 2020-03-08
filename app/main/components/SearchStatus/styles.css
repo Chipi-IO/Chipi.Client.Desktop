@@ -20,8 +20,8 @@
 
 .signInButton {
   cursor: pointer;
-  background: #366AD3;
-  border-radius: 4px;
+  background: #000000;
+  border-radius: 2px;
   padding: 8px 15px;
   border: none;
   color: #FFF;
@@ -30,8 +30,8 @@
 }
 
 .signInButton:focus {
-  box-shadow: 0 0 0 2px #FFF, 0 0 0 4px #2b53a5;
-  background: #2b53a5;
+  box-shadow: 0 0 0 2px #FFF, 0 0 0 4px #000000;
+  background: #000000;
 }
 
 .userPicture {

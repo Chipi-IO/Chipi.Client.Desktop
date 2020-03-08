@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Loading, Preload } from "cerebro-ui";
 import readFile from "./readFile";
 import { memoize } from "cerebro-tools";
 
@@ -10,9 +9,11 @@ const WithFetchedFile = ({ path, options, children }) => {
     return children(source);
   };
   return (
-    <Preload loader={<Loading />} promise={readFile(path, options)}>
+    <div>Loading ...</div>
+    //TODO: fix preload with loading
+    /*<Preload loader={<Loading />} promise={readFile(path, options)}>
       {renderer}
-    </Preload>
+    </Preload>*/
   );
 };
 

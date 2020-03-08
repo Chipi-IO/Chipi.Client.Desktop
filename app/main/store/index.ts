@@ -1,12 +1,11 @@
-import { createHashHistory, History } from "history";
+import { History, createMemoryHistory } from "history";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunkMiddleware from "redux-thunk";
 import { routerMiddleware } from "connected-react-router";
 import { createRootReducer } from "./rootReducers";
 
-export const history: History<any> = createHashHistory({
-  hashType: "slash"
-});
+
+export const history: History<any> = createMemoryHistory({});
 
 const rootReducer = createRootReducer(history);
 
@@ -31,7 +30,7 @@ const store = configureStore();
 if (module.hot) {
   // Enable Webpack hot module replacement for reducers
   module.hot.accept("./rootReducers", () => {
-    store.replaceReducer(createRootReducer(history));
+    store.replaceReducer(rootReducer);
   });
 }
 

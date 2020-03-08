@@ -4,6 +4,8 @@ import dateformat from "dateformat";
 
 const tsFormat = () => dateformat(new Date(), "UTC:yyyy-mm-dd'T'HH:MM:ss.l'Z'");
 
+//const tsFormat = () => new Date();
+
 const internalLogger = winston.createLogger({
   level: LOG_CONFIG.level,
   //format: winston.format.json(),

@@ -1,6 +1,6 @@
-import {Menu, app} from 'electron'
+import {Menu, app, BrowserWindow, MenuItem} from 'electron'
 
-export default () => {
+export default (mainWindow) => {
   const template = [{
     label: 'Chipi',
     submenu: [
@@ -18,7 +18,7 @@ export default () => {
       { label: 'Paste', accelerator: 'CmdOrCtrl+V', selector: 'paste:'},
       { label: 'Select All', accelerator: 'CmdOrCtrl+A', selector: 'selectAll:'},
       { type: 'separator'},
-      { label: 'Quit', accelerator: 'Command+Q', click() { app.quit() } }
+      { label: 'Quit', accelerator: 'Command+Q', click() { mainWindow.setClosable(true); app.quit() } }
     ]
   }]
 

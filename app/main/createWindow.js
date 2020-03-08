@@ -41,9 +41,13 @@ export default ({ src, isDev }) => {
     show: false,
     transparent: true,
     maximizable: false,
+    titleBarStyle: "customButtonsOnHover",
+    minimizable: false,
+    closable: false,
     icon: iconSrc(),
     webPreferences: {
-      plugins: true
+      plugins: true,
+      nodeIntegration: true
     }
   };
 
@@ -60,7 +64,7 @@ export default ({ src, isDev }) => {
   // Float main window above full-screen apps
   //mainWindow.setAlwaysOnTop(true, 'modal-panel')
 
-  mainWindow.loadURL(src);
+  mainWindow.loadURL(src, { protocol: "file:" });
   mainWindow.settingsChanges = new EventEmitter();
 
   // Function to toggle main window
@@ -92,7 +96,10 @@ export default ({ src, isDev }) => {
     config.set('positions', positions)
   }, 100))*/
 
-  mainWindow.on("close", app.quit);
+
+  mainWindow.on("close", () => {
+    app.quit();
+  });
 
   mainWindow.webContents.on("new-window", (event, url) => {
     shell.openExternal(url);

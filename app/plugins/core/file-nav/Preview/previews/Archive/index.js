@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import listArchive from "./listArchive";
 import FileDetails from "../../FileDetails";
-import { Loading, Preload } from "cerebro-ui";
 import styles from "../styles/index.css";
 
 const Archive = ({ path }) => {
@@ -20,10 +19,12 @@ const Archive = ({ path }) => {
       </div>
     );
   };
+  // TODO: Fix the promise loading component
   return (
-    <Preload promise={listArchive(path)} loader={<Loading />}>
+    <div>Loading...</div>
+    /*<Preload promise={listArchive(path)} loader={<div>Loading...</div>}>
       {renderer}
-    </Preload>
+    </Preload>*/
   );
 };
 

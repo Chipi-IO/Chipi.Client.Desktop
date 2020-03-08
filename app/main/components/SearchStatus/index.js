@@ -13,7 +13,7 @@ class SearchStatus extends Component {
   }
 
   render() {
-    let { isOffline, isLoading, authState, login, term } = this.props;
+    let { isOffline, isLoading, authState, onClick, term } = this.props;
     return (
       <div className={styles.status}>
         {isOffline ? (
@@ -35,9 +35,9 @@ class SearchStatus extends Component {
             ref={c => (this.button = c)}
             type="button"
             className={styles.signInButton}
-            onClick={login}
+            onClick={onClick}
           >
-            Sign in
+            Hi!
           </button>
         )}
       </div>

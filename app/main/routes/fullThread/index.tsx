@@ -18,6 +18,7 @@ import { MAX_OUTPUT_HEIGHT, INPUT_HEIGHT } from "../../constants/ui";
 import ResourceIcon, { IconsCollection } from "@app/main/components/ResourceIcon";
 import Logger from "@app/lib/logger";
 import { ISearchResultItem } from "@app/models/interfaces";
+import fade from "../transitions/fade";
 
 const logger = new Logger("component.Chipi");
 
@@ -244,7 +245,7 @@ class FullThread extends React.Component<IFullThreadProps, IFullThreadState> {
   goBack() {
     const { goToRoute } = this.props;
 
-    goToRoute("/");
+    goToRoute("/", fade);
   }
 
   toggleItem(itemId: string) {
@@ -383,7 +384,7 @@ class FullThread extends React.Component<IFullThreadProps, IFullThreadState> {
             <a
               href="#"
               onClick={() => {
-                this.props.goToRoute("/");
+                this.props.goToRoute("/", fade);
               }}
             >
               {/* 

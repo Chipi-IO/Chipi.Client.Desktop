@@ -1,0 +1,17 @@
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-exit-active {
+    animation: fadeOut 250ms both ease;
+  }
+  
+.fade-enter-active {
+animation: fadeIn 250ms both ease;
+}

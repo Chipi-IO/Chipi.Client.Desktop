@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { debounce, bind } from "lodash";
-import { Loading } from "cerebro-ui";
 import styles from "./styles/index.css";
 
 // if (typeof window !== 'undefined') {
@@ -115,7 +114,7 @@ class Pdf extends Component {
   }
 
   render() {
-    if (this.state.loading) return <Loading />;
+    if (this.state.loading) return <div>Loading...</div>;
     return (
       <div
         className={styles.previewPdf}

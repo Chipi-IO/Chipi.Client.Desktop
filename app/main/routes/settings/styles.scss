@@ -1,0 +1,12 @@
+.settings-wrapper {
+    border-radius: 5px;
+    border: solid 1px var(--main-application-border-color);
+    background-color: var(--main-background-color);
+    padding: 10px 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+}
+
